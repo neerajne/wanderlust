@@ -12,6 +12,24 @@
           <a class="nav-link" href="/listings">All Listings</a>
           <a class="nav-link" href="/listings/new">Add new Listing</a>
         </div>
+        <div class="navbar-nav ms-auto">
+          <%if(!currUser){%>
+            <button class="btn btn-success signup-btn btn-sm">
+             <a class="nav-link active" href="/signup">Signup</a>
+        </button>
+         
+        <button class="btn btn-info btn-sm">
+            <a class="nav-link" href="/login">Login</a>
+        </button>
+          <%}%>
+        
+          <%if(currUser){%>
+            <button class="btn btn-outline-danger btn-sm">
+              <a class="nav-link"  href="/logout">Logout</a>
+            </button>
+          
+          <%}%>
+        </div>
       </div>
     </div>
   </nav>

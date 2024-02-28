@@ -97,3 +97,30 @@ min-height: 100vh;
     padding-left: 0;
     padding-right: 0;
 }
+.btn-info{
+    margin: 0;
+    margin-right: 0.9rem !important;
+    border-radius: 0.5rem !important;
+}
+
+.btn-outline-danger{
+    margin: 0;
+    margin-right: 0.9rem !important;
+    border-radius: 0.5rem !important;
+}
+.signup-btn{
+    margin: 0;
+    margin-right: 0.9rem !important;
+    border-radius: 0.5rem !important;
+}
+
+.original_Image{
+    height: 220px;
+    width: 300px;
+}
+
+/* MAPS */
+#map{
+    height: 400px;
+    width: 80vh;
+}
