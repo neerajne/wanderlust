@@ -1,27 +1,9 @@
-// TO MAKE THE MAP APPEAR YOU MUST
-// ADD YOUR ACCESS TOKEN FROM
-// https://account.mapbox.com
-// mapboxgl.accessToken = mapToken;
-//   const map = new mapboxgl.Map({
-//     style:"mapbox://styles/mapbox/streets-v12",
-//       container: 'map',
-//       center: [ 79.52860000, 29.22254000], 
-//       zoom: 9
-//   });
-
-  // console.log(coordinates)
-  // const marker1 = new mapboxgl.Marker()
-  // .setLngLat([12.554729, 55.70651])
-  // .addTo(map);
-
-
-  mapboxgl.accessToken = mapToken;
+mapboxgl.accessToken = mapToken;
 let coordinates = listing.geometry.coordinates;
 
 if (coordinates && coordinates.length <= 0) {
-  coordinates = [ 77.22445000 , 28.63576000 ];
+  coordinates = [78.9629, 20.5937];
 }
-console.log(coordinates);
 
 const map = new mapboxgl.Map({
   container: "map", // container ID
@@ -31,9 +13,10 @@ const map = new mapboxgl.Map({
   zoom: 9, // starting zoom
 });
 
- const marker1 = new mapboxgl.Marker({color:'red'})
-  .setLngLat(coordinates)
-  setPopup()
-  .addTo(map);
 
-  
+const marker1 = new mapboxgl.Marker({color:'red'})
+.setLngLat(coordinates)
+.setPopup(new mapboxgl.Popup({offset: 25}).setHTML(`<h4><p> ${listing.location}</p><i>u will be here after booking</i></h4>`))
+.addTo(map);
+
+
